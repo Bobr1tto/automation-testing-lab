@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, expect
 
 BASE_URL = "https://www.saucedemo.com/"
-INVENTORY_URL = BASE_URL + "inventory.html"
+INVENTORY_URL = BASE_URL + "incorrect.html"
 CART_URL = BASE_URL + "cart.html"
 USERNAME = "standard_user"
 PASSWORD = "secret_sauce"
