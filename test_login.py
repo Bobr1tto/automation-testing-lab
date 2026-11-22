@@ -44,7 +44,10 @@ def test_product_is_displayed_in_cart(page: Page) -> None:
     add_backpack(page)
     page.locator('[data-test="shopping-cart-link"]').click()
     expect(page).to_have_url(CART_URL)
-    item = page.locator('[data-test="inventory-item-name"]')
+    cart = page.locator('[data-test="cart-list"]')
+    expect(cart).to_be_visible()
+    item = cart.locator('[data-test="inventory-item-name"]')
+    expect(item).to_have_count(1)
     expect(item).to_be_visible()
     expect(item).to_have_text(PRODUCT)
 
